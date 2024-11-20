@@ -123,10 +123,10 @@ const TemplateDetail = ({ params: rawParams }: { params: Promise<{ slug: string 
                             whileTap={{ scale: 0.98 }}
                             className="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-medium text-lg disabled:cursor-not-allowed"
                             type="submit"
-                            disabled={loading || (ctx?.subStatus === "inactive" || ctx?.count! >= 10000)}
+                            disabled={loading || (ctx?.subStatus === "inactive" && ctx?.count! >= 10000)}
                         >
                             {loading && <span className="animate-pulse">Generating...</span>}
-                            { ctx?.subStatus === "inactive" || ctx?.count! >= 10000 ? "Upgrade Plan" : "Generate Content" }
+                            { ctx?.subStatus === "inactive" && ctx?.count! >= 10000 ? "Subscribe to generate content" : "Generate Content" }
                             
                         </motion.button>
                     </form>

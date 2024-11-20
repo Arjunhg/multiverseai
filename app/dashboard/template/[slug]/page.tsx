@@ -126,7 +126,7 @@ const TemplateDetail = ({ params: rawParams }: { params: Promise<{ slug: string 
                             disabled={loading || (ctx?.subStatus === "inactive" && ctx?.count! >= 10000)}
                         >
                             {loading && <span className="animate-pulse">Generating...</span>}
-                            { ctx?.subStatus === "inactive" && ctx?.count! >= 10000 ? "Subscribe to generate content" : "Generate Content" }
+                            { ctx?.subStatus === "inactive" && ctx?.count! >= 10000 ? "Subscribe to generate content" : loading ? "Generating..." : "Generate Content"}
                             
                         </motion.button>
                     </form>

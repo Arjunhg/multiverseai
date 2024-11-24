@@ -75,3 +75,7 @@ Populate the `.env` file in the root directory with the following keys:
    npm run dev
    ```
    This command starts the development server. You can access the application at `http://localhost:3000` in your browser.
+
+### Live Demo
+
+https://multiverseai.vercel.app/

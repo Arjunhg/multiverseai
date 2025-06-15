@@ -1,81 +1,147 @@
-## YouTube Link
+# 🚀 MultiVerse AI - AI-Powered Content Generation Platform
 
-https://youtu.be/6gQd65IDabk?si=w4QxbSpo7s7NB_Ef
+![MultiVerse AI](Dash.png)
 
-## Project Overview
+## 🌟 Overview
 
-Here’s a screenshot of the application:
+MultiVerse AI is a cutting-edge content generation platform that leverages artificial intelligence to revolutionize how we create content. From blog posts to code snippets, our platform empowers users to generate high-quality content with just a few clicks.
 
-![Project Screenshot](Dash.png)
+## ✨ Features
 
+- 🤖 **AI-Powered Content Generation**
+  - Blog post generation
+  - Code snippet creation
+  - Custom content templates
+  - Real-time content editing
 
-This project demonstrates the integration of multiple functionalities within a single application. Built with **Next.js**, it seamlessly combines various features and leverages external APIs, such as **GEMINI AI**, to provide robust solutions like text-to-text generation.
+- 🔐 **Secure Authentication**
+  - GitHub OAuth integration
+  - Google Sign-in
+  - Secure session management
+  - Protected routes
 
-### Key Features
+- 🎨 **Modern UI/UX**
+  - Responsive design
+  - Dark/Light mode
+  - Markdown editor
+  - Real-time preview
 
-1. **User Authentication**:  
-   Users can sign up or log in using their GitHub credentials.
+## 🛠️ Tech Stack
 
-2. **Dashboard Access**:  
-   A centralized dashboard where users can explore and utilize services, such as:  
-   - **Blog Creation**  
-   - **Script Generation**  
-   - **Code Generation**
+- **Frontend:**
+  - Next.js 15
+  - React 18
+  - Tailwind CSS
+  - Framer Motion
+  - Headless UI
 
-3. **Service Functionality**:  
-   Each service includes input fields tailored to specific content types, generating outputs based on user-provided input.
+- **Backend:**
+  - Next.js API Routes
+  - Prisma ORM
+  - PostgreSQL Database
+  - Auth.js (NextAuth)
 
-4. **Credits System**:  
-   Users are allocated **10,000 credits** by default. Upon reaching this limit, they are prompted to upgrade their plan to continue using the services.
+- **Authentication:**
+  - GitHub OAuth
+  - Google OAuth
+  - JWT Sessions
 
----
+- **AI Integration:**
+  - Google Generative AI
+  - Custom AI Models
 
-## Getting Started
-
-Follow these steps to set up and run the project locally:
+## 🚀 Getting Started
 
 ### Prerequisites
 
-Ensure you have the following before starting:
-- **Node.js** (v14 or later) and npm installed.
-- Access to the required external APIs (GEMINI, GitHub, Google, Stripe).
-- A PostgreSQL database instance.
+- Node.js 18+
+- PostgreSQL Database
+- GitHub OAuth App
+- Google OAuth Credentials
+- Stripe Account
 
-### Configuration
+### Installation
 
-Populate the `.env` file in the root directory with the following keys:
-
+1. Clone the repository:
    ```bash
-   GOOGLE_GEMINI_API_KEY="Your GEMINI API Key from the GEMINI AI Console"
-   AUTH_SECRET="Your authentication secret"
-
-   AUTH_GITHUB_ID="Your GitHub Client ID from GitHub Developer Console"
-   AUTH_GITHUB_SECRET="Your GitHub Client Secret"
-
-   AUTH_GOOGLE_ID="Your Google Client ID from Google Console"
-   AUTH_GOOGLE_SECRET="Your Google Client Secret"
-
-   DATABASE_URL="Your PostgreSQL connection string"
-
-   STRIPE_PUBLISHABLE_KEY="Your Stripe Publishable Key from Stripe Dashboard"
-   STRIPE_WEBHOOK_SECRET="Your Stripe Webhook Secret"
-
-   WEB_URL="Your deployed or local client URL"
+   git clone https://github.com/yourusername/multiverseai.git
+   cd multiverseai
    ```
 
-### Installation and Running the Development Server
-
-1. **Install dependencies**:  
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. **Run the development server**:  
+3. Set up environment variables:
+   ```env
+   # Database
+   DATABASE_URL="your_postgresql_url"
+
+   # Authentication
+   AUTH_GITHUB_ID="your_github_client_id"
+   AUTH_GITHUB_SECRET="your_github_client_secret"
+   AUTH_SECRET="your_auth_secret"
+
+   # Stripe
+   STRIPE_SECRET_KEY="your_stripe_secret"
+   STRIPE_WEBHOOK_SECRET="your_webhook_secret"
+
+   # AI
+   GOOGLE_AI_API_KEY="your_google_ai_key"
+   ```
+
+4. Initialize the database:
+   ```bash
+   npx prisma generate
+   npx prisma db push
+   ```
+
+5. Run the development server:
    ```bash
    npm run dev
    ```
-   This command starts the development server. You can access the application at `http://localhost:3000` in your browser.
 
-### Live Demo
+## 🧪 Testing
 
-https://multiverseai.vercel.app/
+Run the test suite:
+```bash
+npm test
+```
+
+For watch mode:
+```bash
+npm run test-watch
+```
+
+## 📦 Deployment
+
+The application is configured for deployment on Vercel:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Configure environment variables
+4. Deploy!
+
+## 🔒 Security
+
+- JWT-based authentication
+- Secure session management
+- Protected API routes
+- Input sanitization
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 🌐 Live Demo
+
+Visit our live application at: [https://multiverseai.vercel.app](https://multiverseai.vercel.app)
+
+---
+
+Made with ❤️ 

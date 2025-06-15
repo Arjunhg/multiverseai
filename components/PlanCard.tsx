@@ -51,21 +51,9 @@ export default function PlanCard( {user}: { user: User } ) {
         if(name==="Free"){
             router.push("/dashboard");
         }else{
-            try {
-                
-                const res = await createCheckoutSession();
-
-                if(res.error){
-                    toast.error(res.error)
-                }
-
-                if(res.url){
-                    window.location.href = res.url
-                }
-
-            } catch (error) {
-                toast.error("An error occurred")
-            }
+            toast("This feature is under development. Stay tuned!", {
+              icon: "⚙️",
+            });
         }
     }
 
@@ -140,6 +128,8 @@ export default function PlanCard( {user}: { user: User } ) {
                             ? "bg-emerald-600 text-white hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 focus:ring-emerald-500"
                             : "bg-gray-800 text-white hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-gray-500"
                         )}
+                        disabled = {!user?.email}
+                        title={!user?.email ? 'Sign in to get started' : ""}
                         onClick={() => handleCheckout(tier.name)}
                 >
                 {

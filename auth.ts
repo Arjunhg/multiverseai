@@ -4,7 +4,15 @@ import Google from "next-auth/providers/google"
 import { NextResponse } from "next/server";
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { prisma } from "./prisma/prisma";
- 
+
+// Debug logging
+console.log("Environment check:", {
+  hasGitHubId: !!process.env.AUTH_GITHUB_ID,
+  hasGitHubSecret: !!process.env.AUTH_GITHUB_SECRET,
+  hasDatabaseUrl: !!process.env.DATABASE_URL,
+  nodeEnv: process.env.NODE_ENV
+});
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
 
   providers: [Google, GitHub],
@@ -37,4 +45,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
   adapter: PrismaAdapter(prisma),
 
+  debug: true, // Enable debug mode to see more detailed logs
 })
